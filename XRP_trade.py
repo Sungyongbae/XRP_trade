@@ -4,7 +4,7 @@ import datetime
 import requests
 import telegram
 import pandas as pd
-
+pd.set_option('mode.chained_assignment',  None)
 access = "kz6RzMwD5wv6yGNfvx9gXpGVxsrxqFfxSbijx8qY"
 secret = "3bm4LtCD1ISLFstfmsWJQxuMPbg7kd9j8KASJtXG"
 
