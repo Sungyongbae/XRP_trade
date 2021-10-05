@@ -4,7 +4,7 @@ import datetime
 import requests
 import telegram
 import pandas as pd
-pd.set_option('mode.chained_assignment',  None)
+
 access = "kz6RzMwD5wv6yGNfvx9gXpGVxsrxqFfxSbijx8qY"
 secret = "3bm4LtCD1ISLFstfmsWJQxuMPbg7kd9j8KASJtXG"
 
@@ -118,6 +118,7 @@ while True:
 
         else:
             btc = get_balance("XRP")
+            pd.set_option('mode.chained_assignment',  None)
             if btc >= 5.0 and check_inform == False:
                 sell_result = upbit.sell_market_order("KRW-XRP", btc*0.9995)
                 bot.sendMessage(ID, "T_XRP sell :"+str(sell_result))
